@@ -3,6 +3,11 @@ package com.model;
 import java.io.Serializable;
 
 public class Demo implements Serializable{
+	@Override
+	public String toString() {
+		return "Demo [id=" + id + ", name=" + name + "]";
+	}
+
 	private int id;
 	private String name;
 	

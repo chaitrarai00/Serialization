@@ -20,6 +20,8 @@ public class Serialise {
 			out.close();
 			file.close();
 			System.out.println("Object has been serialized");
+			System.out.println(object_1);
+			//System.out.println(object_1.toString());
 		}catch(IOException e) {
 			e.printStackTrace();
 		}
@@ -27,10 +29,12 @@ public class Serialise {
 		try {
 			FileInputStream file=new FileInputStream(filename);
 			ObjectInputStream in=new ObjectInputStream(file);
-			in.readObject();
+			Demo object_2=(Demo) in.readObject();
 			in.close();
 			file.close();
 			System.out.println("Object has been deserialized");
+			System.out.println(object_2);
+			//System.out.println(object_2.toString());
 		}catch (ClassNotFoundException|IOException e) {
 			e.printStackTrace();
 		}
